@@ -1,14 +1,14 @@
 -- Databricks notebook source
 -- MAGIC %sql
--- MAGIC use mart_geekcoders;
+-- MAGIC use mart_dev;
 
 -- COMMAND ----------
 
-CREATE TABLE IF NOT EXISTS Dim_Airlines (
+CREATE TABLE IF NOT EXISTS airlines (
   iata_code STRING,
   icao_code STRING,
   name STRING
-) USING DELTA LOCATION '/mnt/mart_datalake/Dim_Airlines'
+) USING DELTA LOCATION '/mnt/mart_datalake/airlines'
 
 -- COMMAND ----------
 
@@ -17,4 +17,4 @@ SELECT
 iata_code 
 ,icao_code 
 ,name 
-FROM  cleansed_geekcoders.Airline
+FROM  cleansed_dev.airline

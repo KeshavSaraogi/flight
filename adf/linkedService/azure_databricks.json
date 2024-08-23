@@ -1,0 +1,24 @@
+{
+	"name": "AzureDatabricks",
+	"properties": {
+		"parameters": {
+			"databricks_workspace": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"type": "AzureDatabricks",
+		"typeProperties": {
+			"domain": "@linkedService().databricks_workspace",
+			"accessToken": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "databricks-token"
+			},
+			"existingClusterId": "0501-100408-ctthupdf"
+		}
+	}
+}

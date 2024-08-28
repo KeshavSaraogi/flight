@@ -1,0 +1,22 @@
+{
+	"name": "AzureDataLakeStorage_sink",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureBlobFS",
+		"typeProperties": {
+			"url": "https://geekcodersdatalakedev.dfs.core.windows.net/",
+			"tenant": "95dac5b3-23ba-45c9-81e2-84594794f097",
+			"servicePrincipalId": "7aa07f69-5b53-493f-a06a-aeef60fcc410",
+			"servicePrincipalCredentialType": "ServicePrincipalKey",
+			"servicePrincipalCredential": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "AzureKeyVault1",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "data-app-secrect"
+			}
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"name": "geekcodersadfdev",
+	"properties": {
+		"globalParameters": {
+			"Databricks_URL": {
+				"type": "string",
+				"value": "https://adb-2563610856844156.16.azuredatabricks.net/"
+			}
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "0af43045-939f-4c33-b638-affd24120ec0",
+		"tenantId": "95dac5b3-23ba-45c9-81e2-84594794f097"
+	}
+}

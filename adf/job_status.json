@@ -1,0 +1,28 @@
+{
+	"name": "DW_Status_Job",
+	"properties": {
+		"activities": [
+			{
+				"name": "WebHook1",
+				"type": "WebHook",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://4fc4c2d1-f18e-4937-9251-aa67f3033db1.webhook.eus.azure-automation.net/webhooks?token=tTR5NIS3KUCYpAmz9N1ahj3OTQpltsQo7KrYEOTe63Q%3d",
+					"method": "POST",
+					"body": {
+						"value": "@json(concat('{\"param\": \"',pipeline().parameters.Status, '\"}'))",
+						"type": "Expression"
+					},
+					"timeout": "00:5:00"
+				}
+			}
+		],
+		"parameters": {
+			"Status": {
+				"type": "string"
+			}
+		},
+		"annotations": []
+	}
+}

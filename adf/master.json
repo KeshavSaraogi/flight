@@ -1,0 +1,40 @@
+{
+	"name": "Master",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "Master_GeekCoders_Pipeline",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"layer_names_to_run": [
+						"Cleansed",
+						"Data_Quality_Cleansed",
+						"Mart",
+						"Data_Quality_Mart"
+					]
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Day",
+				"interval": 1,
+				"startTime": "2023-05-18T14:37:00",
+				"timeZone": "India Standard Time",
+				"schedule": {
+					"minutes": [
+						0
+					],
+					"hours": [
+						12
+					]
+				}
+			}
+		}
+	}
+}
